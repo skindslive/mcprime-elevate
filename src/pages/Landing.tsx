@@ -38,7 +38,6 @@ import beforePatio from "../assets/before-patio.jpg";
 import afterPatio from "../assets/after-patio.jpg";
 import beforeYard from "../assets/before-yard.jpg";
 import afterYard from "../assets/after-yard.jpg";
-import mcPrimeLogo from "../assets/mc-prime-logo.png";
 
 const Landing = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -189,25 +188,24 @@ const Landing = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-40 bg-background/95 backdrop-blur-lg border-b border-border shadow-sm">
+      <nav className="fixed top-0 w-full z-40 bg-[#0d0d17] backdrop-blur-lg border-b border-gray-800 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
+          <div className="flex justify-between items-center h-20">
             <div className="flex items-center gap-3">
-              <img src={mcPrimeLogo} alt="MC Prime Logo" className="h-10 w-10" />
-              <span className="font-bold text-xl text-foreground">MC Prime Outdoor Solutions</span>
+              <img src="/logo.png" alt="MC Prime Logo" className="h-16 w-auto" style={{ aspectRatio: '539/486', maxHeight: '130px' }} />
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About</a>
-              <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Services</a>
-              <a href="#gallery" className="text-muted-foreground hover:text-primary transition-colors">Gallery</a>
-              <a href="#testimonials" className="text-muted-foreground hover:text-primary transition-colors">Testimonials</a>
-              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
+              <a href="#about" className="text-gray-300 hover:text-white transition-colors">About</a>
+              <a href="#services" className="text-gray-300 hover:text-white transition-colors">Services</a>
+              <a href="#gallery" className="text-gray-300 hover:text-white transition-colors">Gallery</a>
+              <a href="#testimonials" className="text-gray-300 hover:text-white transition-colors">Testimonials</a>
+              <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
             </div>
             <a
               href={whatsappQuoteUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
+              className="bg-white text-[#0d0d17] px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition-colors"
             >
               Free Quote
             </a>
@@ -227,9 +225,6 @@ const Landing = () => {
         <div className="absolute inset-0 bg-gradient-hero opacity-80" />
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <div className="mb-8">
-            <img src={mcPrimeLogo} alt="MC Prime Logo" className="h-24 w-24 mx-auto mb-6" />
-          </div>
           
           <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Built to Impress.<br />
@@ -631,8 +626,7 @@ const Landing = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <img src={mcPrimeLogo} alt="MC Prime Logo" className="h-8 w-8" />
-              <h3 className="text-2xl font-bold">MC Prime Outdoor Solutions</h3>
+              <img src="/logo.png" alt="MC Prime Logo" className="h-20 w-auto" style={{ aspectRatio: '539/486', maxHeight: '130px' }} />
             </div>
             <p className="text-lg mb-4 font-semibold text-primary">
               "Built to Impress. Designed to Last."
