@@ -149,13 +149,13 @@
   
   /* 3D Card Effect */
   .card-3d {
-    @apply perspective-1000 transform-gpu;
+    perspective: 1000px;
     transform-style: preserve-3d;
   }
   
   .card-3d:hover {
-    @apply scale-105;
-    transform: perspective(1000px) rotateY(5deg) rotateX(2deg);
+    transform: perspective(1000px) rotateY(5deg) rotateX(2deg) scale(1.05);
+    transition: transform 0.3s ease;
   }
   
   /* Floating Animation */
