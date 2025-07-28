@@ -47,9 +47,9 @@ export default {
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
-				'blue-accent': {
-					DEFAULT: 'hsl(var(--blue-accent))',
-					foreground: 'hsl(var(--blue-accent-foreground))'
+				'teal-accent': {
+					DEFAULT: 'hsl(var(--teal-accent))',
+					foreground: 'hsl(var(--teal-accent-foreground))'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -78,7 +78,8 @@ export default {
 			backgroundImage: {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-accent': 'var(--gradient-accent)',
-				'gradient-blue': 'var(--gradient-blue)',
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-teal': 'var(--gradient-teal)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

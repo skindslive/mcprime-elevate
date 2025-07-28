@@ -20,7 +20,10 @@ import {
   Users,
   Heart,
   CheckCircle,
-  Quote
+  Quote,
+  Eye,
+  Target,
+  Gem
 } from "lucide-react";
 
 import ServiceCard from "../components/ServiceCard";
@@ -35,6 +38,7 @@ import beforePatio from "../assets/before-patio.jpg";
 import afterPatio from "../assets/after-patio.jpg";
 import beforeYard from "../assets/before-yard.jpg";
 import afterYard from "../assets/after-yard.jpg";
+import mcPrimeLogo from "../assets/mc-prime-logo.png";
 
 const Landing = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -53,71 +57,71 @@ const Landing = () => {
   const services = [
     {
       title: "Paver Installation",
-      description: "Transform your outdoor spaces with premium paver installations for driveways, patios, and walkways.",
-      features: ["Premium materials", "Custom patterns", "Professional installation", "Lifetime warranty"],
+      description: "Driveways, walkways, patios, and pools with modern pavers in various styles and colors.",
+      features: ["Solid base preparation", "Perfect leveling", "Professional joint finishing", "Various styles & colors"],
       icon: <Home />,
       serviceSlug: "paver-installation"
     },
     {
       title: "Premium Synthetic Grass",
-      description: "Beautiful, low-maintenance artificial turf that looks and feels like natural grass.",
-      features: ["Drought resistant", "Pet-friendly", "UV protected", "No maintenance required"],
+      description: "Natural texture, weather-resistant artificial turf ideal for families, pets, and recreational areas.",
+      features: ["Natural texture", "Weather resistant", "Pet-friendly", "Low maintenance"],
       icon: <Trees />,
       serviceSlug: "synthetic-grass"
     },
     {
       title: "Custom Pergolas",
-      description: "Create stunning outdoor living spaces with custom-designed pergolas and shade structures.",
-      features: ["Custom designs", "Weather-resistant materials", "Professional installation", "Permits included"],
+      description: "Structures in wood, aluminum, or PVC with modern design and high-quality finishing.",
+      features: ["Wood, aluminum, or PVC", "Modern design", "High-quality finishing", "Built-in lighting options"],
       icon: <Building />,
       serviceSlug: "pergolas"
     },
     {
       title: "Deep Cleaning with Power Washer",
-      description: "Restore your outdoor surfaces to like-new condition with professional pressure washing.",
-      features: ["Eco-friendly solutions", "Surface restoration", "Stain removal", "Quick turnaround"],
+      description: "Removes mold, dirt, and rust with pressure washing for pavers, fences, walls, and decks.",
+      features: ["Mold & dirt removal", "Pressure washing", "Immediate transformation", "All surface types"],
       icon: <Droplets />,
       serviceSlug: "power-washing"
     },
     {
       title: "Paver Repairs",
-      description: "Expert repair services to restore damaged or uneven paver installations.",
-      features: ["Color matching", "Structural repairs", "Settlement correction", "Quality guarantee"],
+      description: "Replacing broken or sunken pavers with base leveling and durable joint finishing.",
+      features: ["Broken paver replacement", "Base leveling", "Durable joints", "Color matching"],
       icon: <Hammer />,
       serviceSlug: "paver-repairs"
     },
     {
       title: "Paver Restoration",
-      description: "Bring old pavers back to life with professional restoration and sealing services.",
-      features: ["Deep cleaning", "Sealing application", "Color enhancement", "Protection coating"],
+      description: "Like new without full replacement - cleaning, leveling, and sealing for enhancement.",
+      features: ["Deep cleaning", "Professional sealing", "Renewed look", "Lower cost option"],
       icon: <Palette />,
       serviceSlug: "paver-restoration"
     },
     {
       title: "Fencing",
-      description: "Privacy, security, and style with custom fence installations for your property.",
-      features: ["Multiple materials", "Custom heights", "Privacy options", "Security features"],
+      description: "Installation in PVC, wood, and aluminum with repairs and customized finishing.",
+      features: ["PVC, wood, aluminum", "Custom finishing", "Repair services", "Safety & appeal"],
       icon: <Fence />,
       serviceSlug: "fencing"
     },
     {
       title: "Outdoor Kitchens & Gourmet Spaces",
-      description: "Create the ultimate outdoor entertaining space with custom kitchen installations.",
-      features: ["Custom designs", "Premium appliances", "Storage solutions", "Weather protection"],
+      description: "Grills, sinks, countertops, and bars with premium finishes in granite, quartz, or cement.",
+      features: ["Complete outdoor kitchens", "Premium finishes", "Granite & quartz", "Integrated design"],
       icon: <ChefHat />,
       serviceSlug: "outdoor-kitchens"
     },
     {
       title: "3D Project + Visual Consulting",
-      description: "Visualize your project before construction with detailed 3D renderings and expert consultation.",
-      features: ["3D visualization", "Design consultation", "Material selection", "Project planning"],
+      description: "See the result before execution with realistic design and custom adjustments.",
+      features: ["3D visualization", "Realistic designs", "Custom adjustments", "All budgets"],
       icon: <Box />,
       serviceSlug: "3d-consulting"
     },
     {
       title: "Complete Advisory",
-      description: "End-to-end project management and consultation for your outdoor transformation.",
-      features: ["Project planning", "Material sourcing", "Timeline management", "Quality assurance"],
+      description: "Free technical visits, clear proposals with deadlines and scope, contract + service warranty.",
+      features: ["Free technical visits", "Clear proposals", "Contracts included", "Service warranty"],
       icon: <Shield />,
       serviceSlug: "complete-advisory"
     }
@@ -125,85 +129,85 @@ const Landing = () => {
 
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Maria González",
       location: "Orlando, FL",
-      testimonial: "MC Prime transformed our backyard into a paradise! The synthetic grass looks incredibly real and the paver patio is stunning. Marcelo and his team exceeded our expectations.",
+      testimonial: "The best decision I made was hiring MC Prime! Ariandny was amazing from start to finish. The synthetic grass looks incredibly real.",
       rating: 5
     },
     {
-      name: "Michael Rodriguez",
+      name: "Carlos Rodriguez",
       location: "Kissimmee, FL",
-      testimonial: "Outstanding work on our driveway. The attention to detail and professionalism was impressive. Ariandny was great to work with and the final result is beautiful.",
+      testimonial: "Clean, fast work with a flawless finish. The paver installation exceeded our expectations. Professional team!",
       rating: 5
     },
     {
-      name: "Lisa Chen",
-      location: "Winter Park, FL",
-      testimonial: "From design to completion, the team was professional and efficient. Our outdoor kitchen is everything we dreamed of and more. Highly recommend MC Prime!",
+      name: "Jennifer Thompson",
+      location: "Winter Garden, FL",
+      testimonial: "MC Prime transformed our backyard into a paradise! The outdoor kitchen is everything we dreamed of and more.",
       rating: 5
     },
     {
-      name: "David Thompson",
-      location: "Lake Mary, FL",
-      testimonial: "The 3D visualization helped us see exactly what our project would look like. The final result matched perfectly. Great communication throughout the entire process.",
+      name: "Roberto Silva",
+      location: "Lake Nona, FL",
+      testimonial: "Excelente trabajo! They speak Spanish, English, and Portuguese. Great communication throughout the entire process.",
       rating: 5
     }
   ];
 
   const faqs = [
     {
-      question: "How long does a typical paver installation take?",
-      answer: "Most residential paver projects take 3-7 days depending on the size and complexity. We'll provide a detailed timeline during your consultation."
+      question: "Do you offer financing?",
+      answer: "Yes! We have a bank partner to help make your project happen with flexible payment options."
     },
     {
-      question: "Do you offer warranties on your work?",
-      answer: "Yes, we provide comprehensive warranties on all our services. Paver installations come with a lifetime warranty, and synthetic grass includes a 15-year manufacturer warranty."
+      question: "Can I send a competitor's quote?",
+      answer: "Absolutely! We match equivalent quality estimates. We're confident in our value proposition."
     },
     {
-      question: "Can you work around my schedule?",
-      answer: "Absolutely! We understand that homeowners have busy lives. We'll work with you to schedule the project at times that are convenient for you."
+      question: "Do you only install pavers?",
+      answer: "No! We also do synthetic grass, pergolas, fences, outdoor kitchens, pressure washing, and restoration. Full outdoor solutions!"
     },
     {
-      question: "Do you handle permits and HOA approvals?",
-      answer: "Yes, we handle all necessary permits and can assist with HOA approval processes. We're familiar with local regulations across Central Florida."
+      question: "Do you speak Spanish and English?",
+      answer: "Yes! We offer trilingual service in Portuguese, English, and Spanish for better communication."
     },
     {
       question: "What areas do you serve?",
-      answer: "We proudly serve Orlando, Kissimmee, Winter Park, Lake Mary, Sanford, Apopka, Oviedo, Altamonte Springs, and surrounding areas in Central Florida."
+      answer: "We serve Orlando, Kissimmee, Winter Garden, Lake Nona, Davenport, Clermont, Poinciana, and surrounding areas."
     },
     {
-      question: "How do I get started with my project?",
-      answer: "Simply contact us via WhatsApp, phone, or email for a free consultation. We'll discuss your vision, provide a detailed quote, and create a timeline that works for you."
+      question: "Do you provide warranties?",
+      answer: "Yes, we provide warranty on all services and use high-quality materials for lasting results."
     }
   ];
 
   const serviceAreas = [
-    "Orlando", "Kissimmee", "Winter Park", "Lake Mary", "Sanford", 
-    "Apopka", "Oviedo", "Altamonte Springs", "Longwood", "Casselberry",
-    "Winter Springs", "Maitland", "Windermere", "Dr. Phillips"
+    "Orlando", "Kissimmee", "Winter Garden", "Lake Nona", "Davenport", 
+    "Clermont", "Poinciana", "Winter Park", "Sanford", "Apopka"
   ];
 
   return (
     <div className="min-h-screen bg-background">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-40 bg-background/80 backdrop-blur-lg border-b border-border">
+      <nav className="fixed top-0 w-full z-40 bg-background/95 backdrop-blur-lg border-b border-border shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="font-bold text-xl text-foreground">
-              MC Prime Outdoor Solutions
+            <div className="flex items-center gap-3">
+              <img src={mcPrimeLogo} alt="MC Prime Logo" className="h-10 w-10" />
+              <span className="font-bold text-xl text-foreground">MC Prime Outdoor Solutions</span>
             </div>
             <div className="hidden md:flex space-x-8">
-              <a href="#about" className="text-muted-foreground hover:text-accent transition-colors">About</a>
-              <a href="#services" className="text-muted-foreground hover:text-accent transition-colors">Services</a>
-              <a href="#before-after" className="text-muted-foreground hover:text-accent transition-colors">Portfolio</a>
-              <a href="#testimonials" className="text-muted-foreground hover:text-accent transition-colors">Testimonials</a>
-              <a href="#contact" className="text-muted-foreground hover:text-accent transition-colors">Contact</a>
+              <a href="#about" className="text-muted-foreground hover:text-primary transition-colors">About</a>
+              <a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Services</a>
+              <a href="#gallery" className="text-muted-foreground hover:text-primary transition-colors">Gallery</a>
+              <a href="#testimonials" className="text-muted-foreground hover:text-primary transition-colors">Testimonials</a>
+              <a href="#contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</a>
             </div>
             <a
               href={whatsappQuoteUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-hero text-sm px-4 py-2"
+              className="bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
             >
               Free Quote
             </a>
@@ -220,16 +224,24 @@ const Landing = () => {
             transform: `translateY(${scrollY * 0.5}px)`
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/60 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-hero opacity-80" />
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+          <div className="mb-8">
+            <img src={mcPrimeLogo} alt="MC Prime Logo" className="h-24 w-24 mx-auto mb-6" />
+          </div>
+          
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
             Built to Impress.<br />
-            <span className="gradient-text">Designed to Last.</span>
+            <span className="text-primary">Designed to Last.</span>
           </h1>
           
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Transform your outdoor spaces with premium paver installations, synthetic grass, and custom outdoor living solutions in Central Florida.
+          <p className="text-xl md:text-2xl mb-4 max-w-3xl mx-auto leading-relaxed opacity-90">
+            More than just a project — we create outdoor experiences.
+          </p>
+          
+          <p className="text-lg mb-8 max-w-2xl mx-auto opacity-80">
+            Transform your outdoor spaces with premium solutions in Central Florida.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -237,14 +249,14 @@ const Landing = () => {
               href={whatsappQuoteUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-hero inline-flex items-center gap-2"
+              className="bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:bg-primary/90 transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
             >
               Get Free Quote
               <ArrowRight className="w-5 h-5" />
             </a>
             <a
               href="#services"
-              className="btn-hero-outline inline-flex items-center gap-2"
+              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-foreground transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
             >
               View Services
               <ArrowRight className="w-5 h-5" />
@@ -254,30 +266,37 @@ const Landing = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-muted/30">
+      <section id="about" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="fade-in-up">
+            <div>
               <h2 className="text-4xl font-bold text-foreground mb-6">About MC Prime Outdoor Solutions</h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Founded by Marcelo De Araújo and Ariandny Paelo, MC Prime Outdoor Solutions brings years of expertise and passion for creating beautiful outdoor spaces. We believe in transforming visions into reality with craftsmanship that stands the test of time.
+                MC Prime Outdoor Solutions was built on experience, grit, and a vision for the future. 
+                Founded by <strong>Marcelo De Araújo</strong>, a professional with nearly 20 years of experience in construction and landscaping.
+              </p>
+              
+              <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
+                Today, this story enters a new chapter — stronger, more inclusive, and more impactful. 
+                The company is now also led by <strong>Ariandny Paelo</strong>, a woman, mother, grandmother, Hispanic entrepreneur, 
+                and majority owner — combining Marcelo's technical experience with Ariandny's administrative and organizational experience.
               </p>
               
               <div className="space-y-4 mb-8">
                 <div className="flex items-start gap-3">
-                  <Quote className="text-accent w-6 h-6 mt-1 flex-shrink-0" />
+                  <Quote className="text-primary w-6 h-6 mt-1 flex-shrink-0" />
                   <p className="italic text-muted-foreground">
                     "She is clothed with strength and dignity; she can laugh at the days to come." - Proverbs 31:25
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Quote className="text-accent w-6 h-6 mt-1 flex-shrink-0" />
+                  <Quote className="text-primary w-6 h-6 mt-1 flex-shrink-0" />
                   <p className="italic text-muted-foreground">
-                    "There is no passion to be found playing small - in settling for a life that is less than the one you are capable of living." - Nelson Mandela
+                    "It always seems impossible until it's done." - Nelson Mandela
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Quote className="text-accent w-6 h-6 mt-1 flex-shrink-0" />
+                  <Quote className="text-primary w-6 h-6 mt-1 flex-shrink-0" />
                   <p className="italic text-muted-foreground">
                     "Unless the Lord builds the house, the builders labor in vain." - Psalm 127:1
                   </p>
@@ -285,26 +304,26 @@ const Landing = () => {
               </div>
             </div>
             
-            <div className="fade-in-up">
+            <div>
               <div className="grid grid-cols-2 gap-6">
-                <div className="bg-card p-6 rounded-2xl shadow-card text-center">
-                  <Users className="text-accent w-12 h-12 mx-auto mb-4" />
+                <div className="bg-card p-6 rounded-2xl shadow-card text-center border hover:shadow-glow transition-all duration-300">
+                  <Users className="text-primary w-12 h-12 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-foreground mb-2">500+</h3>
                   <p className="text-muted-foreground">Happy Customers</p>
                 </div>
-                <div className="bg-card p-6 rounded-2xl shadow-card text-center">
+                <div className="bg-card p-6 rounded-2xl shadow-card text-center border hover:shadow-glow transition-all duration-300">
                   <Award className="text-accent w-12 h-12 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-foreground mb-2">5 Star</h3>
-                  <p className="text-muted-foreground">Average Rating</p>
+                  <h3 className="text-2xl font-bold text-foreground mb-2">20+</h3>
+                  <p className="text-muted-foreground">Years Experience</p>
                 </div>
-                <div className="bg-card p-6 rounded-2xl shadow-card text-center">
-                  <Shield className="text-accent w-12 h-12 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-foreground mb-2">Lifetime</h3>
-                  <p className="text-muted-foreground">Warranty</p>
+                <div className="bg-card p-6 rounded-2xl shadow-card text-center border hover:shadow-glow transition-all duration-300">
+                  <Shield className="text-teal-accent w-12 h-12 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-foreground mb-2">Trilingual</h3>
+                  <p className="text-muted-foreground">Service Available</p>
                 </div>
-                <div className="bg-card p-6 rounded-2xl shadow-card text-center">
-                  <Heart className="text-accent w-12 h-12 mx-auto mb-4" />
-                  <h3 className="text-2xl font-bold text-foreground mb-2">Family</h3>
+                <div className="bg-card p-6 rounded-2xl shadow-card text-center border hover:shadow-glow transition-all duration-300">
+                  <Heart className="text-primary w-12 h-12 mx-auto mb-4" />
+                  <h3 className="text-2xl font-bold text-foreground mb-2">Woman</h3>
                   <p className="text-muted-foreground">Owned Business</p>
                 </div>
               </div>
@@ -314,9 +333,9 @@ const Landing = () => {
       </section>
 
       {/* Mission, Vision, Values */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 fade-in-up">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">Our Foundation</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Built on strong values and driven by a clear vision for excellence.
@@ -324,63 +343,68 @@ const Landing = () => {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-card p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 text-center fade-in-up">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Heart className="text-accent-foreground w-8 h-8" />
+            <div className="bg-card p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 text-center border">
+              <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                <Target className="text-primary-foreground w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Mission</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To transform outdoor spaces into beautiful, functional areas where families create lasting memories, using premium materials and exceptional craftsmanship.
+                To offer innovative and lasting solutions for outdoor areas, with personalized design, 
+                high quality, and unwavering commitment to customer satisfaction.
               </p>
             </div>
             
-            <div className="bg-card p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 text-center fade-in-up">
-              <div className="w-16 h-16 bg-blue-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Star className="text-blue-accent-foreground w-8 h-8" />
+            <div className="bg-card p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 text-center border">
+              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                <Eye className="text-accent-foreground w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Vision</h3>
               <p className="text-muted-foreground leading-relaxed">
-                To be Central Florida's premier outdoor solutions company, known for innovation, quality, and transforming ordinary spaces into extraordinary experiences.
+                To be recognized as a reference in backyard and outdoor design throughout Florida, 
+                with female leadership and constant innovation.
               </p>
             </div>
             
-            <div className="bg-card p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 text-center fade-in-up">
-              <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-6">
-                <Shield className="text-accent-foreground w-8 h-8" />
+            <div className="bg-card p-8 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 text-center border">
+              <div className="w-16 h-16 bg-teal-accent rounded-full flex items-center justify-center mx-auto mb-6">
+                <Gem className="text-teal-accent-foreground w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Values</h3>
-              <p className="text-muted-foreground leading-relaxed">
-                Integrity, excellence, and customer satisfaction guide everything we do. We believe in honest communication and delivering results that exceed expectations.
-              </p>
+              <ul className="text-muted-foreground text-left space-y-2">
+                <li>• Quality and excellence in every detail</li>
+                <li>• Respect, transparency, and ethics</li>
+                <li>• Innovation, creativity, and design</li>
+                <li>• Woman-Owned and Hispanic-Owned pride</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-muted/30">
+      <section id="services" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 fade-in-up">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">Our Services</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Complete outdoor transformation solutions designed to enhance your property value and lifestyle.
+              From Project to Complete Transformation - Complete outdoor solutions designed to enhance your lifestyle.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
+              <div key={index} style={{ animationDelay: `${index * 100}ms` }}>
                 <ServiceCard {...service} />
               </div>
             ))}
           </div>
           
-          <div className="text-center mt-12 fade-in-up">
+          <div className="text-center mt-12">
             <a
               href={whatsappQuoteUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-hero inline-flex items-center gap-2"
+              className="bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:bg-primary/90 transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
             >
               Get Started Today
               <ArrowRight className="w-5 h-5" />
@@ -390,25 +414,27 @@ const Landing = () => {
       </section>
 
       {/* Differentials Section */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 fade-in-up">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Why Choose MC Prime?</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Our Differentials</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              We're not just contractors - we're your partners in creating outdoor spaces you'll love for years to come.
+              Why MC Prime stands out in the outdoor solutions market.
             </p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { icon: "👩‍💼", title: "Woman & Hispanic-Owned Leadership", description: "Diverse perspectives bringing unique creativity to every project" },
-              { icon: "🏆", title: "Premium Quality Materials", description: "We use only the finest materials for lasting beauty and durability" },
-              { icon: "⚡", title: "Fast & Efficient Service", description: "Quick turnaround times without compromising on quality" },
-              { icon: "🛡️", title: "Comprehensive Warranties", description: "Lifetime warranties on installations give you peace of mind" },
-              { icon: "📱", title: "3D Visualization Technology", description: "See your project before we build it with detailed 3D renderings" },
-              { icon: "💚", title: "Eco-Friendly Solutions", description: "Sustainable practices and environmentally conscious materials" }
+              { icon: "👩‍💼", title: "Woman and Hispanic-owned leadership", description: "Diverse perspectives bringing unique creativity to every project" },
+              { icon: "🔧", title: "Nearly 20 years of technical experience", description: "Proven expertise in construction and landscaping" },
+              { icon: "🌍", title: "Trilingual service: Portuguese, English, and Spanish", description: "Better communication for diverse communities" },
+              { icon: "🛡️", title: "Warranty on all services", description: "Quality guarantee and peace of mind" },
+              { icon: "💳", title: "Financing and installment options", description: "Bank partner to help make your project happen" },
+              { icon: "📱", title: "Fast WhatsApp support", description: "Quick response and professional service" },
+              { icon: "🎯", title: "We match competitor estimates", description: "Equivalent quality at competitive prices" },
+              { icon: "✨", title: "Professional, clean, and polite team", description: "Respectful service from start to finish" }
             ].map((item, index) => (
-              <div key={index} className="bg-card p-6 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 fade-in-up">
+              <div key={index} className="bg-card p-6 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 border">
                 <div className="text-3xl mb-4">{item.icon}</div>
                 <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
                 <p className="text-muted-foreground">{item.description}</p>
@@ -418,41 +444,37 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Before & After Section */}
-      <section id="before-after" className="py-20 bg-muted/30">
+      {/* Before & After Gallery */}
+      <section id="gallery" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 fade-in-up">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Amazing Transformations</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Before & After — Real Results</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              See how we've transformed outdoor spaces across Central Florida.
+              Visual transformations with immediate impact. See how we transform outdoor spaces across Central Florida.
             </p>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="fade-in-up">
-              <BeforeAfterCard
-                beforeImage={beforePatio}
-                afterImage={afterPatio}
-                title="Patio Transformation"
-                description="Complete patio renovation with premium pavers and synthetic grass installation."
-              />
-            </div>
-            <div className="fade-in-up">
-              <BeforeAfterCard
-                beforeImage={beforeYard}
-                afterImage={afterYard}
-                title="Backyard Makeover"
-                description="Full backyard transformation including synthetic grass, pergola, and outdoor kitchen."
-              />
-            </div>
+            <BeforeAfterCard
+              beforeImage={beforePatio}
+              afterImage={afterPatio}
+              title="Patio Transformation"
+              description="Complete patio renovation with premium pavers and professional installation."
+            />
+            <BeforeAfterCard
+              beforeImage={beforeYard}
+              afterImage={afterYard}
+              title="Backyard Makeover"
+              description="Full backyard transformation including synthetic grass and outdoor living spaces."
+            />
           </div>
           
-          <div className="text-center mt-12 fade-in-up">
+          <div className="text-center mt-12">
             <a
               href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent("Hi, I'd like to see more before and after photos")}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-hero-outline inline-flex items-center gap-2"
+              className="border-2 border-primary text-primary px-8 py-4 rounded-xl font-semibold text-lg hover:bg-primary hover:text-primary-foreground transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
             >
               View More Projects
               <ArrowRight className="w-5 h-5" />
@@ -462,10 +484,10 @@ const Landing = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section id="testimonials" className="py-20">
+      <section id="testimonials" className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 fade-in-up">
-            <h2 className="text-4xl font-bold text-foreground mb-4">What Our Customers Say</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-foreground mb-4">Client Testimonials</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Don't just take our word for it - hear from satisfied customers across Central Florida.
             </p>
@@ -473,7 +495,7 @@ const Landing = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="fade-in-up" style={{ animationDelay: `${index * 150}ms` }}>
+              <div key={index} style={{ animationDelay: `${index * 150}ms` }}>
                 <TestimonialCard {...testimonial} />
               </div>
             ))}
@@ -481,50 +503,49 @@ const Landing = () => {
         </div>
       </section>
 
-      {/* Service Area Section */}
-      <section className="py-20 bg-muted/30">
+      {/* Service Area & Growth */}
+      <section className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 fade-in-up">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Service Areas</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Proudly serving Central Florida communities with premium outdoor solutions.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            {serviceAreas.map((area, index) => (
-              <div key={index} className="bg-card p-4 rounded-lg shadow-card text-center hover:shadow-glow transition-all duration-300 fade-in-up">
-                <MapPin className="text-accent w-5 h-5 mx-auto mb-2" />
-                <p className="font-medium text-foreground">{area}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            {/* Service Area */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Service Area</h2>
+              <p className="text-lg text-muted-foreground mb-8 text-center">
+                Proudly serving Central Florida communities.
+              </p>
+              <div className="grid grid-cols-2 gap-4">
+                {serviceAreas.map((area, index) => (
+                  <div key={index} className="bg-card p-4 rounded-lg shadow-card text-center hover:shadow-glow transition-all duration-300 border">
+                    <MapPin className="text-primary w-5 h-5 mx-auto mb-2" />
+                    <p className="font-medium text-foreground">{area}</p>
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
+            </div>
 
-      {/* Growth & Certifications */}
-      <section className="py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 fade-in-up">
-            <h2 className="text-4xl font-bold text-foreground mb-4">Growth & Certifications</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Our commitment to excellence is backed by industry certifications and continuous growth.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              { icon: <Award className="w-8 h-8" />, title: "Licensed & Insured", description: "Fully licensed contractors with comprehensive insurance coverage" },
-              { icon: <CheckCircle className="w-8 h-8" />, title: "ICPI Certified", description: "Interlocking Concrete Pavement Institute certification" },
-              { icon: <Shield className="w-8 h-8" />, title: "BBB Accredited", description: "Better Business Bureau accredited with A+ rating" },
-              { icon: <Star className="w-8 h-8" />, title: "5-Star Reviews", description: "Consistently rated 5 stars across all review platforms" }
-            ].map((item, index) => (
-              <div key={index} className="bg-card p-6 rounded-2xl shadow-card hover:shadow-glow transition-all duration-300 text-center fade-in-up">
-                <div className="text-accent mb-4 flex justify-center">{item.icon}</div>
-                <h3 className="text-lg font-semibold text-foreground mb-2">{item.title}</h3>
-                <p className="text-muted-foreground text-sm">{item.description}</p>
+            {/* Growth & Certifications */}
+            <div>
+              <h2 className="text-3xl font-bold text-foreground mb-8 text-center">Growth & Certifications</h2>
+              <p className="text-lg text-muted-foreground mb-8 text-center">
+                We're in the process of certification to expand and secure contracts.
+              </p>
+              <div className="space-y-4">
+                {[
+                  { icon: <CheckCircle className="w-6 h-6" />, title: "Florida OSD", description: "Woman & Minority Certification" },
+                  { icon: <Shield className="w-6 h-6" />, title: "SBA & SAM.gov", description: "Federal contract bidding registration" },
+                  { icon: <Award className="w-6 h-6" />, title: "State Registration", description: "Updated insurance and licensing" },
+                  { icon: <Star className="w-6 h-6" />, title: "5-Star Reviews", description: "Consistently rated 5 stars across platforms" }
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-4 bg-card p-6 rounded-xl shadow-card hover:shadow-glow transition-all duration-300 border">
+                    <div className="text-accent">{item.icon}</div>
+                    <div>
+                      <h3 className="font-semibold text-foreground">{item.title}</h3>
+                      <p className="text-muted-foreground text-sm">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
@@ -532,7 +553,7 @@ const Landing = () => {
       {/* FAQ Section */}
       <section className="py-20 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16 fade-in-up">
+          <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-foreground mb-4">Frequently Asked Questions</h2>
             <p className="text-xl text-muted-foreground">
               Get answers to common questions about our services and process.
@@ -541,7 +562,7 @@ const Landing = () => {
           
           <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
+              <div key={index} style={{ animationDelay: `${index * 100}ms` }}>
                 <FAQItem {...faq} />
               </div>
             ))}
@@ -552,73 +573,83 @@ const Landing = () => {
       {/* Final Call to Action */}
       <section id="contact" className="py-20 bg-gradient-hero text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Outdoor Space?</h2>
-            <p className="text-xl mb-8 max-w-3xl mx-auto opacity-90">
-              Get your free consultation today and discover how MC Prime Outdoor Solutions can create the outdoor space of your dreams.
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="flex flex-col items-center">
-                <Phone className="w-8 h-8 mb-4 text-accent" />
-                <h3 className="text-lg font-semibold mb-2">Call Us</h3>
-                <a href={`tel:${phoneNumber}`} className="text-white/90 hover:text-accent transition-colors">
-                  (908) 414-6234
-                </a>
-              </div>
-              
-              <div className="flex flex-col items-center">
-                <Mail className="w-8 h-8 mb-4 text-accent" />
-                <h3 className="text-lg font-semibold mb-2">Email Us</h3>
-                <a href={`mailto:${email}`} className="text-white/90 hover:text-accent transition-colors">
-                  {email}
-                </a>
-              </div>
-              
-              <div className="flex flex-col items-center">
-                <MapPin className="w-8 h-8 mb-4 text-accent" />
-                <h3 className="text-lg font-semibold mb-2">Service Area</h3>
-                <p className="text-white/90">Central Florida</p>
-              </div>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href={whatsappQuoteUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-hero inline-flex items-center gap-2"
-              >
-                Get Free Quote Now
-                <ArrowRight className="w-5 h-5" />
-              </a>
-              <a
-                href={`mailto:${email}?subject=Outdoor Project Inquiry`}
-                className="btn-hero-outline inline-flex items-center gap-2"
-              >
-                Email Consultation
-                <Mail className="w-5 h-5" />
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">Let's Get Started!</h2>
+          <p className="text-xl mb-4 max-w-3xl mx-auto opacity-90">
+            Your backyard could be the next highlight in the neighborhood.
+          </p>
+          <p className="text-lg mb-8 max-w-2xl mx-auto opacity-80">
+            More than just a project — we create outdoor experiences.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="flex flex-col items-center">
+              <Phone className="w-8 h-8 mb-4 text-primary" />
+              <h3 className="text-lg font-semibold mb-2">Call Us</h3>
+              <a href={`tel:${phoneNumber}`} className="text-white/90 hover:text-primary transition-colors">
+                (908) 414-6234
               </a>
             </div>
+            
+            <div className="flex flex-col items-center">
+              <Mail className="w-8 h-8 mb-4 text-primary" />
+              <h3 className="text-lg font-semibold mb-2">Email Us</h3>
+              <a href={`mailto:${email}`} className="text-white/90 hover:text-primary transition-colors">
+                {email}
+              </a>
+            </div>
+            
+            <div className="flex flex-col items-center">
+              <MapPin className="w-8 h-8 mb-4 text-primary" />
+              <h3 className="text-lg font-semibold mb-2">Service Area</h3>
+              <p className="text-white/90">Central Florida</p>
+            </div>
+          </div>
+          
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href={whatsappQuoteUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold text-lg shadow-lg hover:bg-primary/90 transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
+            >
+              Get Free Quote Now
+              <ArrowRight className="w-5 h-5" />
+            </a>
+            <a
+              href={`mailto:${email}?subject=Outdoor Project Inquiry`}
+              className="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold text-lg hover:bg-white hover:text-foreground transform hover:scale-105 transition-all duration-300 inline-flex items-center gap-2"
+            >
+              Email Consultation
+              <Mail className="w-5 h-5" />
+            </a>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-primary text-primary-foreground py-12">
+      <footer className="bg-foreground text-background py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h3 className="text-2xl font-bold mb-4">MC Prime Outdoor Solutions</h3>
-            <p className="text-primary-foreground/80 mb-6">
-              Built to Impress. Designed to Last.
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <img src={mcPrimeLogo} alt="MC Prime Logo" className="h-8 w-8" />
+              <h3 className="text-2xl font-bold">MC Prime Outdoor Solutions</h3>
+            </div>
+            <p className="text-lg mb-4 font-semibold text-primary">
+              "Built to Impress. Designed to Last."
             </p>
-            <div className="flex justify-center space-x-6 text-sm text-primary-foreground/60">
+            <p className="opacity-80 mb-6">
+              More than just a project — we create outdoor experiences.
+            </p>
+            <div className="flex justify-center space-x-6 text-sm opacity-60">
               <span>Licensed & Insured</span>
               <span>•</span>
               <span>Woman & Hispanic-Owned</span>
               <span>•</span>
               <span>Serving Central Florida</span>
             </div>
+            <p className="text-xs opacity-50 mt-4">
+              "Unless the Lord builds the house, the builders labor in vain." — Psalm 127:1
+            </p>
           </div>
         </div>
       </footer>

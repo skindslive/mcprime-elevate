@@ -7,54 +7,56 @@
 
 @layer base {
   :root {
-    /* Brand Colors - MC Prime Outdoor Solutions */
+    /* MC Prime Brand Colors */
     --background: 0 0% 100%;
-    --foreground: 0 0% 0%;
+    --foreground: 220 9% 15%;
     
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 0%;
+    --card-foreground: 220 9% 15%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 0%;
+    --popover-foreground: 220 9% 15%;
     
-    /* Black primary for professional look */
-    --primary: 0 0% 0%;
+    /* Red from MC Prime logo */
+    --primary: 0 84% 55%;
     --primary-foreground: 0 0% 100%;
     
-    /* Gray secondary */
+    /* Gray from logo */
     --secondary: 220 13% 69%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary-foreground: 220 9% 15%;
     
     /* Light gray for muted elements */
     --muted: 220 13% 91%;
     --muted-foreground: 220 9% 46%;
     
-    /* Green accent for nature/outdoor theme */
-    --accent: 158 64% 52%;
+    /* Green from MC Prime logo (grass elements) */
+    --accent: 142 76% 36%;
     --accent-foreground: 0 0% 100%;
     
-    /* Blue for trust and actions */
-    --blue-accent: 217 91% 60%;
-    --blue-accent-foreground: 0 0% 100%;
+    /* Teal accent from palette */
+    --teal-accent: 184 91% 17%;
+    --teal-accent-foreground: 0 0% 100%;
     
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
     --border: 220 13% 91%;
     --input: 220 13% 91%;
-    --ring: 158 64% 52%;
+    --ring: 142 76% 36%;
     
     --radius: 0.75rem;
     
-    /* Custom gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(0, 0%, 0%) 0%, hsl(220, 13%, 18%) 100%);
-    --gradient-accent: linear-gradient(135deg, hsl(158, 64%, 52%) 0%, hsl(158, 64%, 42%) 100%);
-    --gradient-blue: linear-gradient(135deg, hsl(217, 91%, 60%) 0%, hsl(217, 91%, 50%) 100%);
+    /* MC Prime Custom gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(220, 9%, 15%) 0%, hsl(184, 91%, 17%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(142, 76%, 36%) 0%, hsl(142, 76%, 26%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(0, 84%, 55%) 0%, hsl(0, 84%, 45%) 100%);
+    --gradient-teal: linear-gradient(135deg, hsl(184, 91%, 17%) 0%, hsl(184, 91%, 12%) 100%);
     
-    /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.1);
-    --shadow-glow: 0 0 40px hsl(158 64% 52% / 0.3);
-    --shadow-card: 0 4px 20px -2px hsl(0 0% 0% / 0.1);
+    /* MC Prime Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(220 9% 15% / 0.15);
+    --shadow-glow: 0 0 40px hsl(142 76% 36% / 0.3);
+    --shadow-card: 0 4px 20px -2px hsl(220 9% 15% / 0.1);
+    --shadow-red: 0 0 30px hsl(0 84% 55% / 0.3);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
